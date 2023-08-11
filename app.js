@@ -1,6 +1,9 @@
 const express = require('express')
-const mongoose = require('mongoose')
+
 const dotenv = require("dotenv")
+
+
+const path = require('path')
 dotenv.config()
 
 const cors = require('cors')
@@ -32,7 +35,7 @@ try {
     app.use(require('./backend/routes/route'))
     
 } catch (error) {
-    
+  error  
 }
 
 try {
