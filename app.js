@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
-
-
+const dotenv = require("dotenv")
+dotenv.config()
 
 const cors = require('cors')
 const app = express()
@@ -9,6 +9,16 @@ const app = express()
 app.use(cors())
 
 app.use(express.json())
+
+
+//inorder to use cyclic
+app.use(express.static(path.join(__dirname,"./frontend/dist")))
+
+
+app.get("*",(req,res)=>{
+
+  res.sendFile(path.join("./frontend/dist/index.html"))
+})
 
 
 try {
@@ -36,8 +46,7 @@ try {
 } catch (error) {
     error
 }
-
-const PORT = 4000
+const PORT = process.env.PORT || 8080
  
 
 app.listen(`${PORT}`,()=>{
