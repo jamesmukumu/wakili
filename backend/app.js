@@ -14,14 +14,10 @@ app.use(cors())
 app.use(express.json())
 
 
-//inorder to use cyclic
-app.use(express.static(path.join(__dirname,"./frontend/dist")))
 
 
-app.get("*",(req,res)=>{
 
-  res.sendFile(path.join("./frontend/dist/index.html"))
-})
+
 
 
 try {
