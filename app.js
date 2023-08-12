@@ -3,7 +3,6 @@ const express = require('express')
 const dotenv = require("dotenv")
 
 
-const path = require('path')
 dotenv.config()
 
 const cors = require('cors')
@@ -14,14 +13,7 @@ app.use(cors())
 app.use(express.json())
 
 
-//inorder to use cyclic
-app.use(express.static(path.join(__dirname,"./frontend/dist")))
 
-
-app.get("*",(req,res)=>{
-
-  res.sendFile(path.join("./frontend/dist/index.html"))
-})
 
 
 try {

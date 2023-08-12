@@ -11,7 +11,7 @@ function Findclient() {
   const handleSearch = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.get('http://localhost:4000/clientlist', {
+      const response = await axios.get('https://wakili.onrender.com/clientlist', {
         params: { Firstname: clientName }
       });
 

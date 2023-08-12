@@ -12,7 +12,7 @@ const [clientdata,setClientData] = useState(null)
 
 async function Fetchdatabyid(e){
 e.preventDefault()
-const response = await axios.get('http://localhost:4000/id',{
+const response = await axios.get('https://wakili.onrender.com/id',{
 params:{idNumber:id}
 
 })

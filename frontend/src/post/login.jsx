@@ -72,7 +72,7 @@ content=(
           <input
           required
             type={showPassword ? 'text' : 'password'}
-            value={password}
+           
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
@@ -87,6 +87,7 @@ content=(
        <button type='submit'>Login</button>
        <p  className='a'>Don't have an account? <Link to="/register">Register here</Link></p>
        <p className='message'>{message}</p>
+       <a href="https://wakili.onrender.com/login"></a>
       </form>
      
     
@@ -99,7 +100,7 @@ content=(
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:4000/login', {
+      const response = await axios.post('https://wakili.onrender.com/login', {
         Username: username,
         password: password,
       });

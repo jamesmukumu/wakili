@@ -16,7 +16,7 @@ function Findcasebyid() {
  
     
     try {
-      const response = await axios.get("http://localhost:4000/casedetails", {
+      const response = await axios.get('https://wakili.onrender.com/casedetails', {
         params: { clientID: clientid }
       });
 

@@ -8,7 +8,7 @@ function Viewclients() {
   useEffect(() => {
     async function fetchClients() {
       try {
-        const response = await axios.get('http://localhost:4000/allclients');
+        const response = await axios.get('https://wakili.onrender.com/allclients');
         setSeeallclients(response.data)
       } catch (error) {
         console.error("Error fetching clients:", error)

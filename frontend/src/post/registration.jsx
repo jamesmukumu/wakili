@@ -30,7 +30,7 @@ function Register() {
     e.preventDefault();
   
     try {
-      const response = await axios.post('http://localhost:4000/register', {
+      const response = await axios.post('https://wakili.onrender.com/register', {
         Username: username,
         Email: email,
         password: password,

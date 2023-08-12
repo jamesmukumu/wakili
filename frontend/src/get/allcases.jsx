@@ -8,7 +8,7 @@ function Showcases() {
   useEffect(() => {
     async function fetchCases() {
       try {
-        const response = await axios.get('http://localhost:4000/allcases');
+        const response = await axios.get('https://wakili.onrender.com/allcases');
         setSeecase(response.data);
       } catch (error) {
         console.error(error);
@@ -18,7 +18,7 @@ function Showcases() {
     fetchCases();
   }, []);
 
-  return (
+  return ( 
     <div>
       <table>
         <thead>

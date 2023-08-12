@@ -26,7 +26,7 @@ if(clientid.length < 24){
  }
 
 try {
-   const response =  await axios.post('http://localhost:4000/cases',{
+   const response =  await axios.post('https://wakili.onrender.com/cases',{
     caseType:casetype,
     caseDescription:casedescription,
     clientID:clientid,
@@ -114,7 +114,7 @@ try {
 <Link to="/navigation">Home</Link>
 {error && <p className="message">{error}</p>}
 {message && <p className="message">{message}</p>}
-<p>&copy;Karanja Mbugua @2023</p>
+
         </div>
     )
 }

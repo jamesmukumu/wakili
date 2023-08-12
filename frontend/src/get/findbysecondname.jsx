@@ -11,7 +11,7 @@ function Findclientbysecondname() {
   async function handleSearch (e)  {
     e.preventDefault()
     try {
-      const response = await axios.get('http://localhost:4000/secondname', {
+      const response = await axios.get('https://wakili.onrender.com/secondname', {
         params: { Secondname: clientName }
       });
 

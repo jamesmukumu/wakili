@@ -14,7 +14,7 @@ function Client() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:4000/client", {
+      const response = await axios.post('https://wakili.onrender.com/client', {
         Firstname: firstname,
         Secondname: secondname,
         phoneNumber: phonenumber,
